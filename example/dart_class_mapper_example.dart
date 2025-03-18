@@ -16,11 +16,13 @@ class UserGetDto {
 }
 
 void main() {
+  //* Primeiro, criamos um mapeamento entre User e UserDto.
   CreateMap<UserGetDto, User>((user) => UserGetDto(
         name: user.name,
         email: user.email,
       ));
 
+  //* Exemplo de uso
   final user = User(
     name: 'John Doe',
     email: 'john.doe@example',
@@ -31,4 +33,62 @@ void main() {
 
   print(userGetDto.name); // John Doe
   print(userGetDto.email); // john.doe@example
+
+  //* Exemplo de uso com listas
+  final users = [
+    User(
+      name: 'John Doe',
+      email: 'john.doe@example',
+      password: 'teste',
+    ),
+    User(
+      name: 'Jane Doe',
+      email: 'jane.doe@example',
+      password: 'teste',
+    ),
+  ];
+  final usersGetDto = GetMapper<UserGetDto, User>().list(users);
+  for (var user in usersGetDto) {
+    print(user.name);
+    print(user.email);
+  }
+
+  //* Exemplo de uso com sets
+  final usersSet = {
+    User(
+      name: 'John Doe',
+      email: 'john.doe@example',
+      password: 'teste',
+    ),
+    User(
+      name: 'Jane Doe',
+      email: 'jane.doe@example',
+      password: 'teste',
+    ),
+  };
+  final usersGetDtoSet = GetMapper<UserGetDto, User>().set(usersSet);
+  for (var user in usersGetDtoSet) {
+    print(user.name);
+    print(user.email);
+  }
+
+  //* Exemplo de uso com maps
+  final usersMap = {
+    'john': User(
+      name: 'John Doe',
+      email: 'john.doe@example',
+      password: 'teste',
+    ),
+    'jane': User(
+      name: 'Jane Doe',
+      email: 'jane.doe@example',
+      password: 'teste',
+    ),
+  };
+  final usersGetDtoMap = GetMapper<UserGetDto, User>().map(usersMap);
+  for (var user in usersGetDtoMap.entries) {
+    print(user.key);
+    print(user.value.name);
+    print(user.value.email);
+  }
 }
