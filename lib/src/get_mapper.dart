@@ -25,4 +25,11 @@ class GetMapper<T, R> {
   /// final userDto = GetMapper<UserDto, User>().value(user);
   /// ```
   T value(R value) => MapperService.i.get<T, R>(value);
+
+  List<T> list(List<R> values) => values.map((e) => value(e)).toList();
+
+  Set<T> set(Set<R> values) => values.map((e) => value(e)).toSet();
+
+  Map<String, T> map(Map<String, R> values) =>
+      values.map((key, value) => MapEntry(key, this.value(value)));
 }
