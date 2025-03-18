@@ -23,12 +23,12 @@ void main() {
 
   final user = User(
     name: 'John Doe',
-    email: 'john;doe@example',
+    email: 'john.doe@example',
     password: 'teste',
   );
 
   final userGetDto = GetMapper<UserGetDto, User>().value(user);
 
   print(userGetDto.name); // John Doe
-  print(userGetDto.email); // john;doe@example
+  print(userGetDto.email); // john.doe@example
 }
