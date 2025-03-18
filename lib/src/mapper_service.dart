@@ -1,3 +1,5 @@
+import 'package:dart_class_mapper/src/dart_class_mapper_exception.dart';
+
 class MapperService {
   static MapperService? _instance = MapperService._();
 
@@ -9,6 +11,7 @@ class MapperService {
   MapperService._();
 
   final Map<String, Function> _mappings = {};
+  Map<String, Function> get mappings => _mappings;
 
   T get<T, R>(R value) {
     final key = getMappingKey<R, T>();
@@ -16,7 +19,7 @@ class MapperService {
     final mapping = _mappings[key] as T Function(R)?;
 
     if (mapping == null) {
-      throw Exception('No mapping registered for $R to $T');
+      throw DartClassMapperException('No mapping registered for $R to $T');
     }
 
     return mapping(value);
@@ -26,7 +29,7 @@ class MapperService {
     final key = getMappingKey<T, R>();
 
     if (_mappings.containsKey(key)) {
-      throw Exception('Mapping already registered for $T to $R');
+      throw DartClassMapperException('Mapping already registered for $T to $R');
     }
 
     _mappings[key] = function;
@@ -34,4 +37,8 @@ class MapperService {
 
   // ignore: unnecessary_brace_in_string_interps
   String getMappingKey<T, R>() => '${T}_${R}';
+
+  void clear() {
+    _mappings.clear();
+  }
 }
