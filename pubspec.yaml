@@ -1,5 +1,9 @@
 name: dart_class_mapper
-description: Package para fazer mapeamento entre classes.
+description:
+  O Dart Class Mapper é uma biblioteca leve e intuitiva para facilitar o mapeamento entre diferentes classes em Dart.
+  Ideal para cenários como conversões entre entidades e DTOs, este package ajuda a reduzir repetição de código, melhora
+  a organização e promove reutilização através de uma API simples baseada em funções como `CreateMap` e `GetMapper`.
+
 version: 1.0.0
 repository: https://github.com/LucassMateus/dart_class_mapper
 topics:
