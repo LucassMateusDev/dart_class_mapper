@@ -4,7 +4,7 @@ description:
   Ideal para cenários como conversões entre entidades e DTOs, este package ajuda a reduzir repetição de código, melhora
   a organização e promove reutilização através de uma API simples baseada em funções como `CreateMap` e `GetMapper`.
 
-version: 1.0.1
+version: 1.0.2
 repository: https://github.com/LucassMateus/dart_class_mapper
 topics:
   - class-mapper
