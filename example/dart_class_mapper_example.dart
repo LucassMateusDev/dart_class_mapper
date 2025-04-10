@@ -17,10 +17,19 @@ class UserGetDto {
 
 void main() {
   //* Primeiro, criamos um mapeamento entre User e UserDto.
-  CreateMap<UserGetDto, User>((user) => UserGetDto(
-        name: user.name,
-        email: user.email,
-      ));
+  CreateMap<UserGetDto, User>(
+    (user) => UserGetDto(
+      name: user.name,
+      email: user.email,
+    ),
+    reverse: (userGetDto) {
+      return User(
+        name: userGetDto.name,
+        email: userGetDto.email,
+        password: '', // Adicione um valor padrão ou trate conforme necessário
+      );
+    },
+  );
 
   //* Exemplo de uso
   final user = User(
@@ -30,9 +39,13 @@ void main() {
   );
 
   final userGetDto = GetMapper<UserGetDto, User>().value(user);
-
   print(userGetDto.name); // John Doe
   print(userGetDto.email); // john.doe@example
+
+  final userReverse = GetMapper<User, UserGetDto>().value(userGetDto);
+  print(userReverse.name); // John Doe
+  print(userReverse.email); // john.doe@example
+  print(userReverse.password); // ''
 
   //* Exemplo de uso com listas
   final users = [
