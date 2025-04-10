@@ -1,5 +1,5 @@
 import 'package:dart_class_mapper/dart_class_mapper.dart';
-import 'package:dart_class_mapper/src/mapper_service.dart';
+import 'package:dart_class_mapper/src/mapper/mapper_service.dart';
 import 'package:test/test.dart';
 
 import '../example/dart_class_mapper_example.dart';
