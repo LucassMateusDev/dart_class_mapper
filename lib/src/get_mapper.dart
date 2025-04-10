@@ -1,4 +1,4 @@
-import 'package:dart_class_mapper/src/mapper_service.dart';
+import 'package:dart_class_mapper/src/mapper/mapper_service.dart';
 
 /// Recupera um mapeamento registrado no [MapperService] e aplica a conversão entre dois tipos [T] e [R].
 ///
