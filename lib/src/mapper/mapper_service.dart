@@ -1,4 +1,4 @@
-import 'package:dart_class_mapper/src/dart_class_mapper_exception.dart';
+import 'package:dart_class_mapper/src/exceptions/dart_class_mapper_exception.dart';
 
 class MapperService {
   static MapperService? _instance = MapperService._();

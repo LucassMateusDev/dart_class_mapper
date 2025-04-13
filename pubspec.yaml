@@ -1,7 +1,8 @@
 name: dart_class_mapper
-description: Biblioteca leve para mapear classes e JSON em Dart. Ideal para conversões entre entidades, DTOs e objetos JSON com uma API simples e reutilizável.
+description: Lightweight library for mapping classes in Dart. Ideal for converting between entities and DTOs objects with a simple and reusable API.
 
-version: 1.0.2
+version: 1.1.0
+
 repository: https://github.com/LucassMateus/dart_class_mapper
 topics:
   - class-mapper

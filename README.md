@@ -1,24 +1,24 @@
 # Dart Class Mapper
 
-Um package simples para mapeamento de classes em Dart, permitindo converter instâncias de um tipo para outro de maneira flexível e reutilizável.
+A lightweight and simple package for class mapping in Dart, allowing flexible and reusable conversion between instance types.
 
 ## 🎯  **Recursos**
-- **⚡ Simples e fácil de usar**
-- **🔁 Evita repetições desnecessárias no código**
-- **🔄 Permite a reutilização de mapeamentos**
-- **🛠️  API intuitiva com CreateMap e GetMapper**
+- **⚡ Simple and easy to use**
+- **🔁 Avoids unnecessary code repetition**
+- **🔄 Enables reuse of mappings**
+- **🛠️ Intuitive API with CreateMap and GetMapper**
 
 
-## 📦 **Instalação**
+## 📦 **Installation**
 
-Adicione o **Dart Class Mapper** ao seu projeto pelo pubspec.yaml: 
+Add Dart Class Mapper to your project via pubspec.yaml: 
 ```sh
 dependencies:
-  dart_class_mapper:: ^1.0.0
+  dart_class_mapper: ^1.1.0
 ```
 
-## 🚀 Como usar
-### 🏗️ Criando as classes
+## 🚀 How to Use
+### 🏗️ Creating the Classes
 ```dart
 class User {
   String name;
@@ -36,9 +36,9 @@ class UserGetDto {
 }
 ```
 
-### 🔗 Criando o mapeamento
+### 🔗 Creating the Mapping
 
-Use CreateMap para registrar mapeamentos entre classes.
+Use CreateMap to register mappings between classes.
 ```dart
 CreateMap<UserGetDto, User>((user) => UserGetDto(
         name: user.name,
@@ -46,13 +46,13 @@ CreateMap<UserGetDto, User>((user) => UserGetDto(
       ));
 ```
 
-### 🔍 Recuperando o mapeamento
-Use GetMapper para recuperar mapeamentos.
+### 🔍 Retrieving the Mapping
+Use GetMapper to retrieve mappings.
 ```dart
 final userGetDto = GetMapper<UserGetDto, User>().value(user);
 ```
 
-## Exemplo de Uso
+## Usage Example
 
 ```dart
 void main() {
