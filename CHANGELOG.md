@@ -1,3 +1,6 @@
+## [1.1.1]
+* Adjust formatting
+
 ## [1.1.0]
 * Added reverse function on CreateMap
 * Readme migrated to English
