@@ -6,9 +6,17 @@ on:
       - main
 
 jobs:
+  check_publish_warnings:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check Publish Warnings
+        uses: dart pub publish --dry-run
+
   create_tag:
     name: Create Git Tag from pubspec.yaml
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
