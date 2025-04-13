@@ -9,7 +9,7 @@ topics:
   - mappings
   - automapper
   - object-transform
-  - dart
+  - mapper
 
 environment:
   sdk: ^3.0.0
