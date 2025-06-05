@@ -171,3 +171,10 @@ extension MappableObjectToJsonExtension<T extends Object> on T {
     }
   }
 }
+
+extension MapperJsonListExtension on List<JSON> {
+  /// Mapeia uma lista de JSONs para uma lista de objetos do tipo [T] usando os mapeamentos registrados.
+  List<T> mapToObjectsList<T extends Object>() {
+    return map((json) => MapperService.i.get<T, JSON>(json)).toList();
+  }
+}
