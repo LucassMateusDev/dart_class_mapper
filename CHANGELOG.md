@@ -24,6 +24,9 @@
     - Added `toJsonList()` extension on `Iterable<Object>` for serializing lists of objects to lists of JSON.
     - Added `mapToObjectsList<T>()` extension on `List<JSON>` for deserializing lists of JSON to lists of objects.
 
+## [1.1.1]
+* Adjust formatting
+
 ## [1.1.0]
 * Added reverse function on CreateMap
 * Readme migrated to English
