@@ -14,7 +14,7 @@ A lightweight and simple package for class mapping in Dart, allowing flexible an
 Add Dart Class Mapper to your project via pubspec.yaml: 
 ```sh
 dependencies:
-  dart_class_mapper: ^1.1.0
+  dart_class_mapper: ^1.2.1
 ```
 
 ## 🚀 How to Use
@@ -73,3 +73,6 @@ void main() {
   print(userGetDto.email); // john.doe@example
 }
 ```
+## For more usage examples:
+- ### [Common example](https://github.com/LucassMateusDev/dart_class_mapper/blob/main/example/dart_class_mapper_example.dart)
+- ### [JSON example](https://github.com/LucassMateusDev/dart_class_mapper/blob/main/example/dart_class_mapper_json_example.dart)
