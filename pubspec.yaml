@@ -1,7 +1,7 @@
 name: dart_class_mapper
 description: Lightweight library for mapping classes in Dart. Ideal for converting between entities and DTOs objects with a simple and reusable API.
 
-version: 1.2.0
+version: 1.2.1
 
 repository: https://github.com/LucassMateus/dart_class_mapper
 topics:
